@@ -4,6 +4,10 @@
   height: 100px;
   width: 100px;
   animation: bounce 1s infinite;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
 }
 
 @keyframes bounce {

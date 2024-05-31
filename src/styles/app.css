@@ -43,6 +43,7 @@
   justify-content: center;
   display: flex;
   align-items: center;
+  z-index: 1;
   .card-container {
     display: flex;
     flex-direction: column;
@@ -51,6 +52,7 @@
     border: 1px solid orange;
     border-radius: 48px;
     background-color: white;
+    z-index: 2;
     .close {
       position: relative;
       right: 10px;
