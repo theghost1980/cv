@@ -20,9 +20,17 @@ module.exports = {
         loader: "babel-loader",
       },
       {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/,
+      },
+      {
+        type: "asset",
+        test: /\.(png|svg|jpg|gif)$/i,
       },
     ],
   },
