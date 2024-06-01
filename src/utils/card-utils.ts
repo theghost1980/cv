@@ -1,6 +1,3 @@
-//TODO add as .env file
-//  github api token
-//  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
 const GITHUB_API_TOKEN =
   process.env.GITHUB_API_TOKEN ?? "no token, contact DEV!";
 
