@@ -40,10 +40,10 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
-    new Dotenv(),
-    new webpack.ProvidePlugin({
-      process: "process/browser",
-    }),
+    // new Dotenv(),
+    // new webpack.ProvidePlugin({
+    //   process: "process/browser",
+    // }),
     new HtmlWebpackPlugin({
       template: "public/index.html",
     }),

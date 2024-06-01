@@ -2,9 +2,7 @@ const getJsonFromRepository = async (baseUrl: string, route: string) => {
   try {
     const response = await fetch(`${baseUrl}${route}`, {
       headers: {
-        Authorization: `Bearer ${
-          process.env.GITHUB_API_TOKEN ?? "no token, contact DEV!"
-        }`,
+        Authorization: `Bearer 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`,
       },
     });
     if (response.status === 200) {
