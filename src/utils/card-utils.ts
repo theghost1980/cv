@@ -6,7 +6,6 @@ const getJsonFromRepository = async (baseUrl: string, route: string) => {
       },
     });
     if (response.status === 200) {
-      console.log({ response }); //TODO remove line
       return response.json();
     }
     throw new Error(
