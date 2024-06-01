@@ -1,11 +1,10 @@
-const GITHUB_API_TOKEN =
-  process.env.GITHUB_API_TOKEN ?? "no token, contact DEV!";
-
 const getJsonFromRepository = async (baseUrl: string, route: string) => {
   try {
     const response = await fetch(`${baseUrl}${route}`, {
       headers: {
-        Authorization: `Bearer ${GITHUB_API_TOKEN}`,
+        Authorization: `Bearer ${
+          process.env.GITHUB_API_TOKEN ?? "no token, contact DEV!"
+        }`,
       },
     });
     if (response.status === 200) {
