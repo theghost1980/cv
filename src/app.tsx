@@ -32,7 +32,9 @@ function App() {
           -> amount of time coding: (calculate aprox)
           -> tasks solved & delivers: (to calculate)
           -> websites built from scratch: (to calculate)
-          -> hours of learning: (to calculate) */}
+          -> hours of learning: (to calculate)
+          -: //TODO find a way to use .env
+          */}
         <Block source={NUMBERSVG} animDuration="4.8s" />
         <Block source={BLOCKCHAINSVG} animDuration="8.5s" />
         <Block
