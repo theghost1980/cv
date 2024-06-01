@@ -1,0 +1,96 @@
+.overlay-container {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.568);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    border: 1px solid orange;
+    border-radius: 48px;
+    background-color: white;
+    z-index: 2;
+    padding: 24px 24px;
+    font-family: "Raleway", sans-serif;
+    overflow-y: scroll;
+
+    .close {
+      position: relative;
+      right: 10px;
+      top: 10px;
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: 300;
+      text-align: center;
+      width: 100px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .card-title {
+      font-size: 40px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .card-subtitle {
+      font-size: 32px;
+      font-weight: 400;
+    }
+
+    .card-description {
+      padding: 12px 12px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+
+    .card-projects-container {
+      .card-project-container {
+        display: flex;
+        flex-direction: row;
+        padding: 8px;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border: 1px solid orange;
+        border-radius: 12px;
+        margin-bottom: 8px;
+        .card-project-description-container {
+          row-gap: 4px;
+          .title {
+            font-size: 20px;
+            font-weight: 600;
+          }
+          .description {
+            font-size: 16px;
+            font-weight: 400;
+          }
+          .topics {
+            font-size: 14px;
+            font-weight: 400;
+          }
+          .url {
+            font-size: 14px;
+            font-weight: 700;
+            color: rgb(233, 190, 111);
+          }
+        }
+        .card-project-image {
+          border-radius: 24px;
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
+}

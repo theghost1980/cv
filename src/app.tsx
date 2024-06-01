@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Arrow } from "./components/arrow";
 import { Block } from "./components/block/block";
+import { Card } from "./components/card";
 import "./styles/app.css";
 const BLOCKCHAINSVG: string = require("./images/svg/blockchain.svg");
 const REACTSVG: string = require("./images/svg/react.svg");
@@ -9,9 +10,10 @@ const JSSVG: string = require("./images/svg/javascript.svg");
 const TSSVG: string = require("./images/svg/typescript.svg");
 const WEBPACKSVG: string = require("./images/svg/webpack.svg");
 const MOBILESVG: string = require("./images/svg/mobile.svg");
+const NUMBERSVG: string = require("./images/svg/number1.svg");
 
 function App() {
-  const [cardExperience, setCardExperience] = useState<number>();
+  const [cardExperience, setCardExperience] = useState<string>();
 
   return (
     <div>
@@ -24,29 +26,31 @@ function App() {
         <Arrow />
       </div>
       <div className="cv-container">
+        {/* //TODO specifically for the number icon: */}
+        {/* - data title: So you are a number person? Like number huh?
+         - make a nice animations about:
+          -> amount of time coding: (calculate aprox)
+          -> tasks solved & delivers: (to calculate)
+          -> websites built from scratch: (to calculate)
+          -> hours of learning: (to calculate) */}
+        <Block source={NUMBERSVG} animDuration="4.8s" />
+        <Block source={BLOCKCHAINSVG} animDuration="8.5s" />
         <Block
-          source={BLOCKCHAINSVG}
-          animDuration="0.5s"
-          click={() => setCardExperience(1)}
+          source={REACTSVG}
+          animDuration="4s"
+          click={() => setCardExperience("react")}
         />
-        <Block source={REACTSVG} animDuration="0.8s" />
-        <Block source={HTML5SVG} animDuration="1s" />
-        <Block source={JSSVG} animDuration="1.5s" />
-        <Block source={TSSVG} animDuration="2s" />
-        <Block source={WEBPACKSVG} animDuration="3s" />
-        <Block source={MOBILESVG} />
+        <Block source={HTML5SVG} animDuration="4.6s" />
+        <Block source={JSSVG} animDuration="5.5s" />
+        <Block source={TSSVG} animDuration="8s" />
+        <Block source={WEBPACKSVG} animDuration="7s" />
+        <Block source={MOBILESVG} animDuration="7.4s" />
       </div>
       {cardExperience && (
-        <div
-          className="overlay-container"
-          onClick={() => setCardExperience(undefined)}
-        >
-          <div className="card-container">
-            <div className="close" onClick={() => setCardExperience(undefined)}>
-              close[x]
-            </div>
-          </div>
-        </div>
+        <Card
+          close={() => setCardExperience(undefined)}
+          cardDataName={cardExperience}
+        />
       )}
     </div>
   );

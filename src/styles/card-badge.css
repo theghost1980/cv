@@ -1,0 +1,6 @@
+.card-badge {
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid blue;
+  display: inline-block;
+}
