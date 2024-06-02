@@ -1,8 +1,10 @@
+import { Config } from "../config";
+
 const getJsonFromRepository = async (baseUrl: string, route: string) => {
   try {
     const response = await fetch(`${baseUrl}${route}`, {
       headers: {
-        Authorization: `Bearer ${process.env.GH_KEY}`,
+        Authorization: `Bearer ${Config.api}`,
       },
     });
     if (response.status === 200) {
