@@ -4,6 +4,7 @@ import CloseSvgUrl from "./assets/svg/close.svg";
 import ContactSvgUrl from "./assets/svg/contacts.svg";
 import GithubSvgUrl from "./assets/svg/github-mark.png";
 import JsSvgUrl from "./assets/svg/javaScript.svg";
+import LinkedinSvgUrl from "./assets/svg/linkedin.svg";
 import MailSvgUrl from "./assets/svg/mail.svg";
 import MobileSvgUrl from "./assets/svg/mobile.svg";
 import NumberSvgUrl from "./assets/svg/number1.svg";
@@ -41,6 +42,14 @@ function App() {
             <li>
               <a href="https://github.com/theghost1980" target="__blank">
                 <img src={GithubSvgUrl} alt="github-svg" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/saturno-mangieri/"
+                target="__blank"
+              >
+                <img src={LinkedinSvgUrl} alt="linkedin-svg" />
               </a>
             </li>
             <li
