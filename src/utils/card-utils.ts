@@ -2,7 +2,7 @@ const getJsonFromRepository = async (baseUrl: string, route: string) => {
   try {
     const response = await fetch(`${baseUrl}${route}`, {
       headers: {
-        Authorization: `Bearer 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`,
+        Authorization: `Bearer ${process.env.GH_KEY}`,
       },
     });
     if (response.status === 200) {
