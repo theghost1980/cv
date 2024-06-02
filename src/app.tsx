@@ -3,15 +3,15 @@ import { Arrow } from "./components/arrow";
 import { Block } from "./components/block/block";
 import { Card } from "./components/card";
 import "./styles/app.css";
-const BLOCKCHAINSVG: string = require("./images/svg/blockchain.svg");
-const REACTSVG: string = require("./images/svg/react.svg");
-// const HTML5SVG: string = require("./images/svg/html5.svg");
-const JSSVG: string = require("./images/svg/javascript.svg");
-const TSSVG: string = require("./images/svg/typescript.svg");
-const WEBPACKSVG: string = require("./images/svg/webpack.svg");
-const MOBILESVG: string = require("./images/svg/mobile.svg");
-const NUMBERSVG: string = require("./images/svg/number1.svg");
-const CONTACTSVG: string = require("./images/svg/contacts.svg");
+const BLOCKCHAINSVG: string = require("../public/images/svg/blockchain.svg");
+const REACTSVG: string = require("../public/images/svg/react.svg");
+// const HTML5SVG: string = require("../public/images/svg/html5.svg");
+const JSSVG: string = require("../public/images/svg/javascript.svg");
+const TSSVG: string = require("../public/images/svg/typescript.svg");
+const WEBPACKSVG: string = require("../public/images/svg/webpack.svg");
+const MOBILESVG: string = require("../public/images/svg/mobile.svg");
+const NUMBERSVG: string = require("../public/images/svg/number1.svg");
+const CONTACTSVG: string = require("../public/images/svg/contacts.svg");
 //TODO enable commented code when needed in the future!
 function App() {
   const [cardExperience, setCardExperience] = useState<string>();
