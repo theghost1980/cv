@@ -23,6 +23,13 @@
       border-radius: 30px;
     }
   }
+  @media (max-width: 762px) {
+    height: 60px;
+    width: 60px;
+    .image {
+      height: 50px;
+    }
+  }
 }
 
 @keyframes bounce {

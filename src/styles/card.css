@@ -23,10 +23,19 @@
     scrollbar-width: thin;
     scrollbar-arrow-color: rgba(255, 255, 255, 0);
     scrollbar-color: white rgba(221, 161, 51, 0.736);
-
+    @media (max-width: 770px) {
+      width: 70%;
+    }
     .close {
-      position: relative;
       width: 30px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: white;
+      border-radius: 8px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
       &:hover {
         cursor: pointer;
       }
@@ -48,6 +57,18 @@
       font-size: 24px;
       font-weight: 400;
       line-height: 150%;
+    }
+
+    @media (max-width: 770px) {
+      .card-title {
+        font-size: 30px;
+      }
+      .card-subtitle {
+        font-size: 22px;
+      }
+      .card-description {
+        font-size: 18px;
+      }
     }
 
     .card-projects-container {
@@ -86,11 +107,22 @@
               color: rgb(236, 182, 82);
             }
           }
+          @media (max-width: 591px) {
+            width: 90%;
+            overflow: auto;
+          }
         }
         .card-project-image {
           border-radius: 24px;
           width: 200px;
           height: 200px;
+        }
+      }
+      @media (max-width: 770px) {
+        .card-project-container {
+          flex-direction: column;
+          align-items: center;
+          row-gap: 15px;
         }
       }
     }
