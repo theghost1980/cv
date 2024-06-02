@@ -2,4 +2,3 @@
 *.fyc
 /node_modules/*
 .env
-/dist/
