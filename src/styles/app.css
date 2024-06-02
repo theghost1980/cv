@@ -12,7 +12,7 @@
 
 .contact-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -21,12 +21,22 @@
   background-color: rgba(255, 166, 0, 0.773);
   border-radius: 12px;
   width: 150px;
+  height: 50px;
   ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
     list-style: none;
     padding-inline-start: 0px;
     .close-icon {
       cursor: pointer;
     }
+  }
+  img {
+    width: 30px;
+    height: 30px;
   }
 }
 

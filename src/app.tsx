@@ -1,18 +1,20 @@
 import React, { useState } from "react";
+import BlockchainSVGUrl from "./assets/svg/blockchain.svg";
+import CloseSvgUrl from "./assets/svg/close.svg";
+import ContactSvgUrl from "./assets/svg/contacts.svg";
+import GithubSvgUrl from "./assets/svg/github-mark.png";
+import JsSvgUrl from "./assets/svg/javaScript.svg";
+import MailSvgUrl from "./assets/svg/mail.svg";
+import MobileSvgUrl from "./assets/svg/mobile.svg";
+import NumberSvgUrl from "./assets/svg/number1.svg";
+import ReactSvgUrl from "./assets/svg/react.svg";
+import TsSvgUrl from "./assets/svg/typescript.svg";
+import WebpackSvgUrl from "./assets/svg/webpack.svg";
 import { Arrow } from "./components/arrow";
 import { Block } from "./components/block/block";
 import { Card } from "./components/card";
 import "./styles/app.css";
-const BLOCKCHAINSVG: string = require("../public/images/svg/blockchain.svg");
-const REACTSVG: string = require("../public/images/svg/react.svg");
-// const HTML5SVG: string = require("../public/images/svg/html5.svg");
-const JSSVG: string = require("../public/images/svg/javascript.svg");
-const TSSVG: string = require("../public/images/svg/typescript.svg");
-const WEBPACKSVG: string = require("../public/images/svg/webpack.svg");
-const MOBILESVG: string = require("../public/images/svg/mobile.svg");
-const NUMBERSVG: string = require("../public/images/svg/number1.svg");
-const CONTACTSVG: string = require("../public/images/svg/contacts.svg");
-//TODO enable commented code when needed in the future!
+
 function App() {
   const [cardExperience, setCardExperience] = useState<string>();
   const [showContactsContainer, setShowContactsContainer] = useState(false);
@@ -23,7 +25,7 @@ function App() {
         className="contact-section"
         onMouseEnter={() => setShowContactsContainer(true)}
       >
-        <img src={CONTACTSVG} alt="contact-svg" />
+        <img src={ContactSvgUrl} alt="contact-svg" />
       </div>
       {showContactsContainer && (
         <div
@@ -32,18 +34,20 @@ function App() {
         >
           <ul>
             <li>
-              <a href="mailto:saturnob612@gmail.com">Mail me</a>
+              <a href="mailto:saturnob612@gmail.com">
+                <img src={MailSvgUrl} alt="mail-svg" />
+              </a>
             </li>
             <li>
               <a href="https://github.com/theghost1980" target="__blank">
-                Github
+                <img src={GithubSvgUrl} alt="github-svg" />
               </a>
             </li>
             <li
               className="close-icon"
               onClick={() => setShowContactsContainer(false)}
             >
-              close
+              <img src={CloseSvgUrl} alt="close-svg" />
             </li>
           </ul>
         </div>
@@ -58,30 +62,29 @@ function App() {
       </div>
       <div className="cv-container">
         <Block
-          source={NUMBERSVG}
+          source={NumberSvgUrl}
           animDuration="4.8s"
           click={() => setCardExperience("numbers")}
         />
         <Block
-          source={BLOCKCHAINSVG}
+          source={BlockchainSVGUrl}
           animDuration="8.5s"
           click={() => setCardExperience("blockchain")}
         />
         <Block
-          source={REACTSVG}
+          source={ReactSvgUrl}
           animDuration="4s"
           click={() => setCardExperience("react")}
         />
-        {/* <Block source={HTML5SVG} animDuration="4.6s" /> */}
         <Block
-          source={JSSVG}
+          source={JsSvgUrl}
           animDuration="5.5s"
           click={() => setCardExperience("javascript")}
         />
-        <Block source={TSSVG} animDuration="8s" />
-        <Block source={WEBPACKSVG} animDuration="7s" />
+        <Block source={TsSvgUrl} animDuration="8s" />
+        <Block source={WebpackSvgUrl} animDuration="7s" />
         <Block
-          source={MOBILESVG}
+          source={MobileSvgUrl}
           animDuration="7.4s"
           click={() => setCardExperience("mobile")}
         />

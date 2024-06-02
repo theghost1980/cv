@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import CloseSvgUrl from "../assets/svg/close.svg";
 import { Project } from "../interfaces/card-data.interface";
 import { CardDataList } from "../reference-data/card-data";
 import "../styles/card.css";
@@ -100,7 +101,7 @@ export const Card = ({ cardDataName, close }: Props) => {
     <div className="back-card-container">
       <div className="card-container">
         <div className="close" onClick={close}>
-          close[x]
+          <img src={CloseSvgUrl} alt="close-button-svg" />
         </div>
         <div className="card-title">{cardData.title}</div>
         {cardData.subtitle && (
