@@ -28,17 +28,53 @@ export const Card = ({ cardDataName, close }: Props) => {
 
   const init = async () => {
     if (cardData) {
-      console.log({ cardData });
       setCardRelatedProjectList(cardData.relatedProjects);
+      if (cardDataName === "numbers") {
+        setLoadingData(false);
+        return;
+      }
       try {
         let cardDataAdditions: Project[] = [];
         for (const rp of cardData.relatedProjects) {
-          const repoData = await CardUtils.getJsonFromRepository(
-            GITHUB_BASE_URL,
+          let repoData = await CardUtils.getJsonFromRepository(
+            rp.otherRepo ?? GITHUB_BASE_URL,
             rp.repositoryName
           );
 
           if (repoData) {
+            if (
+              rp.repositoryName.toLowerCase().includes("keychain-extension")
+            ) {
+              repoData = {
+                ...repoData,
+                homepage: "https://hive-keychain.com/",
+                topics: [
+                  "blockchain",
+                  "hive-engine",
+                  "hive-crypto",
+                  "typescript",
+                  "webpack",
+                  "jest",
+                  "testing",
+                ],
+              };
+            }
+            if (rp.repositoryName.toLowerCase().includes("keychain-mobile")) {
+              repoData = {
+                ...repoData,
+                homepage: "https://hive-keychain.com/",
+                topics: [
+                  "blockchain",
+                  "react-native",
+                  "android",
+                  "ios",
+                  "java",
+                  "jest",
+                  "reactjs",
+                  "typescript",
+                ],
+              };
+            }
             cardDataAdditions.push({
               repositoryName: rp.repositoryName,
               imageUrl: rp.imageUrl,
@@ -48,7 +84,6 @@ export const Card = ({ cardDataName, close }: Props) => {
             });
           }
         }
-        console.log({ cardDataAdditions });
         if (cardDataAdditions.length > 0)
           setCardRelatedProjectList(cardDataAdditions);
       } catch (error) {
@@ -62,7 +97,7 @@ export const Card = ({ cardDataName, close }: Props) => {
   };
 
   return (
-    <div className="overlay-container" onClick={close}>
+    <div className="back-card-container">
       <div className="card-container">
         <div className="close" onClick={close}>
           close[x]
@@ -87,7 +122,7 @@ export const Card = ({ cardDataName, close }: Props) => {
                       Description: {p.description}
                     </div>
                   )}
-                  {p.topics && (
+                  {p.topics && p.topics.length > 0 && (
                     <div className="topics">
                       Skills/Tech Stack:{" "}
                       {p.topics.map((pt, index) => {
@@ -95,7 +130,14 @@ export const Card = ({ cardDataName, close }: Props) => {
                       })}
                     </div>
                   )}
-                  {p.homepage && <div className="url">URL:{p.homepage}</div>}
+                  {p.homepage && (
+                    <div className="url">
+                      URL:{" "}
+                      <a href={`${p.homepage}`} target="__blank">
+                        {p.homepage}
+                      </a>
+                    </div>
+                  )}
                 </div>
                 <img
                   src={p.imageUrl}
@@ -107,6 +149,7 @@ export const Card = ({ cardDataName, close }: Props) => {
           })}
         </div>
       </div>
+      <div className="overlay" onClick={close} />
     </div>
   );
 };

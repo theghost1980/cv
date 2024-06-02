@@ -1,12 +1,27 @@
 .bounce {
+  align-items: center;
+  justify-content: center;
+  display: flex;
   position: relative;
   bottom: 0;
   height: 100px;
   width: 100px;
   animation: bounce 1s infinite;
-  &:hover {
-    cursor: pointer;
-    opacity: 0.5;
+  &.border-block {
+    border: 1px solid #c0bebe;
+    border-radius: 50px;
+    border-width: medium;
+    padding: 4px;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+  .image {
+    height: 90px;
+    &.rounded-borders {
+      border-radius: 30px;
+    }
   }
 }
 

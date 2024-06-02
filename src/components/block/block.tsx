@@ -15,11 +15,16 @@ export const Block = ({ source, w, animDuration, click }: Props) => {
 
   return (
     <div
-      className="bounce"
+      className={`bounce ${click ? "border-block" : ""}`}
       style={{ width: w, animationDuration: animDuration }}
       onClick={handleClick}
     >
-      <img src={source} width={w} height={100} />
+      <img
+        src={source}
+        width={w}
+        height={100}
+        className={`image ${click ? "rounded-borders" : ""}`}
+      />
     </div>
   );
 };

@@ -4,6 +4,7 @@ export interface Project {
   description?: string;
   topics?: string[];
   homepage?: string;
+  otherRepo?: string;
 }
 
 export interface CardData {
