@@ -66,6 +66,13 @@ function App() {
         <div className="sub-title">
           {"Professional Frontend Developer with +4y experience."}
         </div>
+        <a href="https://www.codewars.com/users/theghost1980" target="__blank">
+          <img
+            src="https://www.codewars.com/users/theghost1980/badges/small"
+            alt="codewars-level-badge"
+            className="codewars-badge"
+          />
+        </a>
         <div className="text">click on any bordered icon for details</div>
         <Arrow />
       </div>
