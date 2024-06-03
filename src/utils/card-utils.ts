@@ -1,10 +1,6 @@
 import { Config } from "../config";
 
 const getJsonFromRepository = async (baseUrl: string, route: string) => {
-  //TODO remove testing block
-  console.log({ 1: process.env.GH_KEY, 2: process.env.REACT_APP_API_KEY });
-  //end testing
-
   try {
     const response = await fetch(`${baseUrl}${route}`, {
       headers: {
