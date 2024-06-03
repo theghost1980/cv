@@ -16,6 +16,9 @@ import { Block } from "./components/block/block";
 import { Card } from "./components/card";
 import "./styles/app.css";
 
+//TODO make a new PDF CV and download button
+//TODO add translations
+//TODO check why the env vars are read as undefined in build - netlify
 //TODO possible: https://www.smashingmagazine.com/2023/05/safest-way-hide-api-keys-react/
 //  -> https://www.smashingmagazine.com/2023/05/safest-way-hide-api-keys-react/#back-end-proxy-server
 

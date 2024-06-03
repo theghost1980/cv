@@ -43,6 +43,8 @@ module.exports = {
       template: "public/index.html",
       favicon: "./src/assets/svg/saturno.svg",
     }),
-    new Dotenv(),
+    new Dotenv({
+      systemvars: true,
+    }),
   ],
 };
