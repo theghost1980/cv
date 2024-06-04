@@ -64,7 +64,7 @@ function App() {
       <div className="hero-section-container">
         <div className="main-title">{"Eng. Saturno Mangieri"}</div>
         <div className="sub-title">
-          {"Professional Frontend Developer with +4y experience."}
+          Professional Frontend Developer with deep experience in Blockchain.
         </div>
         <a href="https://www.codewars.com/users/theghost1980" target="__blank">
           <img
