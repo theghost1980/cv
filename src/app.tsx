@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BlockchainSVGUrl from "./assets/svg/blockchain.svg";
 import CloseSvgUrl from "./assets/svg/close.svg";
 import ContactSvgUrl from "./assets/svg/contacts.svg";
@@ -16,9 +16,49 @@ import { Block } from "./components/block/block";
 import { Card } from "./components/card";
 import "./styles/app.css";
 
+//Important //TODO
+// - check if possible to run your own https://github.com/LibreTranslate/LibreTranslate
+//    -> possibly in heroku
+
 function App() {
   const [cardExperience, setCardExperience] = useState<string>();
   const [showContactsContainer, setShowContactsContainer] = useState(false);
+  const [heroSubtitle, setHeroSubtitle] = useState(
+    "Professional Frontend Developer with deep experience in Blockchain."
+  );
+
+  useEffect(() => {
+    init();
+  }, []);
+
+  //TODO continue checking to see if possible work with trans. https://www.youtube.com/watch?v=pu4ris7FCtQ
+  const init = async () => {
+    const data = new URLSearchParams();
+    data.append("from", "en");
+    data.append("to", "es");
+    data.append("text", heroSubtitle);
+
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbww7O9lFqEf5BDftTXUG2Kww1vyVt_b4U9e0V4kiA8hhiuLIujdXEIdyvBsIJdTbIAxqA/exec",
+      {
+        redirect: "follow",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        mode: "cors",
+        body: data,
+      }
+    );
+    if (response.status === 200) {
+      const data = await response.json();
+      console.log({ data });
+      if (data.status === "success") {
+        setHeroSubtitle(data.translation);
+      }
+    }
+    console.log({ response });
+  };
 
   return (
     <div>
@@ -63,9 +103,7 @@ function App() {
       )}
       <div className="hero-section-container">
         <div className="main-title">{"Eng. Saturno Mangieri"}</div>
-        <div className="sub-title">
-          Professional Frontend Developer with deep experience in Blockchain.
-        </div>
+        <div className="sub-title">{heroSubtitle}</div>
         <a href="https://www.codewars.com/users/theghost1980" target="__blank">
           <img
             src="https://www.codewars.com/users/theghost1980/badges/small"
@@ -76,6 +114,14 @@ function App() {
         <div className="text">click on any bordered icon for details</div>
         <Arrow />
       </div>
+      {/* //testing appScripts */}
+      {/* <form
+        method="post"
+        action="https://script.google.com/macros/s/AKfycbxROjlMfdblQixIQhETLEIz84FsMdWp_ZM6VpQMfrNYZHNokGlYZ7y6lsjq14gEik0PDw/exec"
+      >
+        <button type="submit">test</button>
+      </form> */}
+      {/* //end testing */}
       <div className="cv-container">
         <Block
           source={NumberSvgUrl}
