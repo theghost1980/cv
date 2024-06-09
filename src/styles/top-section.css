@@ -1,0 +1,58 @@
+.top-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-height: 60px;
+  justify-content: space-between;
+
+  .contact-section,
+  .info_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .contact-container,
+  .info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    left: 50px;
+    background-color: rgba(255, 166, 0, 0.773);
+    border-radius: 12px;
+    width: 150px;
+    height: 50px;
+    &.right-side {
+      left: unset;
+      right: 50px;
+      width: 180px;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      list-style: none;
+      padding-inline-start: 0px;
+      a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+      }
+      .close-icon {
+        cursor: pointer;
+      }
+    }
+  }
+}

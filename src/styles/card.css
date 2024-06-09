@@ -23,6 +23,12 @@
     scrollbar-width: thin;
     scrollbar-arrow-color: rgba(255, 255, 255, 0);
     scrollbar-color: white rgba(221, 161, 51, 0.736);
+    &.LIGHT {
+      background-color: white;
+    }
+    &.DARK {
+      background-color: rgb(26, 25, 25);
+    }
     @media (max-width: 770px) {
       width: 70%;
     }
@@ -86,26 +92,36 @@
           flex-direction: column;
           flex: 1;
           justify-content: space-evenly;
+          padding: 0px 12px;
           .title {
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 700;
+          }
+          .sub-title {
+            font-size: 18px;
+            font-weight: 500;
           }
           .description {
             font-size: 16px;
             font-weight: 400;
           }
           .topics {
+            border: 0.7px solid orange;
+            border-radius: 8px;
+            padding: 8px;
+            background-color: #ffa5001c;
+            margin: 8px 0px;
             font-size: 14px;
             font-weight: 400;
           }
           .url {
-            font-size: 14px;
-            font-weight: 700;
-            color: rgb(233, 190, 111);
-            a {
-              text-decoration: none;
-              color: rgb(236, 182, 82);
-            }
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            max-width: 120px;
+            justify-content: space-between;
+            margin: 4px 0px;
           }
           @media (max-width: 591px) {
             width: 90%;
@@ -137,6 +153,6 @@
     display: flex;
     align-items: center;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.545);
+    background-color: rgba(0, 0, 0, 0.725);
   }
 }

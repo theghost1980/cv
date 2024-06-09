@@ -1,0 +1,19 @@
+.icon {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  svg {
+    width: 30px !important;
+    height: 30px !important;
+    &.LIGHT {
+      fill: black !important;
+    }
+    &.DARK {
+      fill: white !important;
+    }
+  }
+  &.small-by-default {
+    height: 24px !important;
+    width: 24px !important;
+  }
+}

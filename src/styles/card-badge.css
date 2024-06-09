@@ -1,7 +1,12 @@
 .card-badge {
-  padding: 4px;
+  padding: 8px;
   border-radius: 12px;
-  border: 1px solid blue;
   display: inline-block;
   margin-right: 4px;
+  background-color: #db7b67;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  margin-top: 4px;
+  cursor: pointer;
 }

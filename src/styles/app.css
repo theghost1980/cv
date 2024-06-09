@@ -1,115 +1,24 @@
-.contact-section {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 50px;
-  height: 50px;
-  opacity: 0.5;
-  &:hover {
-    opacity: 1;
+.app-container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  &.LIGHT {
+    background-color: white;
+    color: rgb(4, 4, 4);
   }
-}
-
-.contact-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 10px;
-  left: 80px;
-  background-color: rgba(255, 166, 0, 0.773);
-  border-radius: 12px;
-  width: 150px;
-  height: 50px;
-  ul {
+  &.DARK {
+    background-color: rgb(26, 25, 25);
+    color: white;
+  }
+  .cv-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     width: 100%;
-    list-style: none;
-    padding-inline-start: 0px;
-    .close-icon {
-      cursor: pointer;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0px;
+    @media (max-width: 762px) {
+      flex-wrap: wrap;
     }
-  }
-  img {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-.hero-section-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 40vw;
-  justify-content: center;
-  align-items: center;
-  .main-title {
-    font-family: "Raleway", sans-serif;
-    font-size: 60px;
-    font-weight: 600;
-  }
-  .sub-title {
-    font-family: "Raleway", sans-serif;
-    font-size: 30px;
-    font-weight: 300;
-    text-align: center;
-  }
-  .codewars-badge {
-    margin-top: 8px;
-    opacity: 0.8;
-    &:hover {
-      cursor: pointer;
-      opacity: 1;
-      box-shadow: 10px 10px 5px -7px rgba(126, 77, 17, 0.75);
-    }
-  }
-  .text {
-    margin-top: 10px;
-    font-family: "Raleway", sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    text-align: center;
-  }
-  @media (max-width: 762px) {
-    .main-title {
-      font-size: 40px;
-    }
-    .sub-title {
-      font-size: 20px;
-    }
-    .text {
-      font-size: 12px;
-    }
-  }
-  @media (max-width: 560px) {
-    height: 70vw;
-    justify-content: end;
-  }
-  @media (max-width: 440px) {
-    .main-title {
-      font-size: 30px;
-    }
-    .sub-title {
-      font-size: 16px;
-    }
-    .text {
-      font-size: 10px;
-    }
-  }
-}
-
-.cv-container {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-evenly;
-  position: fixed;
-  bottom: 0px;
-  @media (max-width: 762px) {
-    flex-wrap: wrap;
   }
 }

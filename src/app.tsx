@@ -1,160 +1,117 @@
 import React, { useEffect, useState } from "react";
-import BlockchainSVGUrl from "./assets/svg/blockchain.svg";
-import CloseSvgUrl from "./assets/svg/close.svg";
-import ContactSvgUrl from "./assets/svg/contacts.svg";
-import GithubSvgUrl from "./assets/svg/github-mark.png";
-import JsSvgUrl from "./assets/svg/javaScript.svg";
-import LinkedinSvgUrl from "./assets/svg/linkedin.svg";
-import MailSvgUrl from "./assets/svg/mail.svg";
-import MobileSvgUrl from "./assets/svg/mobile.svg";
-import NumberSvgUrl from "./assets/svg/number1.svg";
-import ReactSvgUrl from "./assets/svg/react.svg";
-import TsSvgUrl from "./assets/svg/typescript.svg";
-import WebpackSvgUrl from "./assets/svg/webpack.svg";
-import { Arrow } from "./components/arrow";
 import { Block } from "./components/block/block";
 import { Card } from "./components/card";
+import { HeroSection } from "./components/hero-section";
+import { TopSection } from "./components/top-section";
+import { useTranslationContext } from "./context/data-context";
+import { useTheme } from "./context/theme-context";
+import { Project } from "./interfaces/card-data.interface";
+import { CardDataList } from "./reference-data/card-data";
+import {
+  PAGE_TEXT_CONTENT,
+  PageTextContent,
+} from "./reference-data/page-text-content";
 import "./styles/app.css";
-
-//Important //TODO
-// - check if possible to run your own https://github.com/LibreTranslate/LibreTranslate
-//    -> possibly in heroku
-
+import { AppUtils } from "./utils/app-utils";
+//TODO add media rules for big screens > 1200 px only one rule.
 function App() {
-  const [cardExperience, setCardExperience] = useState<string>();
-  const [showContactsContainer, setShowContactsContainer] = useState(false);
-  const [heroSubtitle, setHeroSubtitle] = useState(
-    "Professional Frontend Developer with deep experience in Blockchain."
-  );
+  const { theme } = useTheme();
+  const { setTranslationData } = useTranslationContext();
+  const [cardDataName, setCardDataName] = useState<string>();
+  const [fetchedCardDataList, setFetchedCardDataList] = useState<Project[]>();
 
   useEffect(() => {
     init();
   }, []);
 
-  //TODO continue checking to see if possible work with trans. https://www.youtube.com/watch?v=pu4ris7FCtQ
   const init = async () => {
-    const data = new URLSearchParams();
-    data.append("from", "en");
-    data.append("to", "es");
-    data.append("text", heroSubtitle);
-
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbww7O9lFqEf5BDftTXUG2Kww1vyVt_b4U9e0V4kiA8hhiuLIujdXEIdyvBsIJdTbIAxqA/exec",
-      {
-        redirect: "follow",
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        mode: "cors",
-        body: data,
+    try {
+      const tempCardDataList = await AppUtils.getCardDataList(CardDataList);
+      if (tempCardDataList.length) {
+        setFetchedCardDataList(tempCardDataList);
+        const tempDataTranslation = await AppUtils.getTranslatedData(
+          PAGE_TEXT_CONTENT,
+          tempCardDataList
+        );
+        if (tempDataTranslation.status === "success") {
+          //TODO bellow maybe move to a util
+          const rempapedCardDataList: PageTextContent[] = tempCardDataList.map(
+            (c) => {
+              return {
+                key: `card-description-${c.repositoryName}`,
+                value: {
+                  en: c.description,
+                  es: "",
+                },
+              };
+            }
+          );
+          const copyPageTextContent = [
+            ...PAGE_TEXT_CONTENT,
+            ...rempapedCardDataList,
+          ];
+          const finalTranslationData: PageTextContent[] = [];
+          copyPageTextContent.map((c) => {
+            const found = tempDataTranslation.translation.find(
+              (t) => t.key === c.key
+            );
+            if (found) {
+              finalTranslationData.push({
+                key: found.key,
+                value: {
+                  en: c.value.en,
+                  es: found.translation,
+                },
+              } as PageTextContent);
+            }
+          });
+          console.log({ finalTranslationData }); //TODO remove line
+          setTranslationData(finalTranslationData);
+        }
       }
-    );
-    if (response.status === 200) {
-      const data = await response.json();
-      console.log({ data });
-      if (data.status === "success") {
-        setHeroSubtitle(data.translation);
-      }
+    } catch (error) {
+      console.log({ error });
     }
-    console.log({ response });
   };
 
   return (
-    <div>
-      <div
-        className="contact-section"
-        onMouseEnter={() => setShowContactsContainer(true)}
-      >
-        <img src={ContactSvgUrl} alt="contact-svg" />
-      </div>
-      {showContactsContainer && (
-        <div
-          className={"contact-container"}
-          onMouseLeave={() => setShowContactsContainer(false)}
-        >
-          <ul>
-            <li>
-              <a href="mailto:saturnob612@gmail.com">
-                <img src={MailSvgUrl} alt="mail-svg" />
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/theghost1980" target="__blank">
-                <img src={GithubSvgUrl} alt="github-svg" />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/saturno-mangieri/"
-                target="__blank"
-              >
-                <img src={LinkedinSvgUrl} alt="linkedin-svg" />
-              </a>
-            </li>
-            <li
-              className="close-icon"
-              onClick={() => setShowContactsContainer(false)}
-            >
-              <img src={CloseSvgUrl} alt="close-svg" />
-            </li>
-          </ul>
-        </div>
-      )}
-      <div className="hero-section-container">
-        <div className="main-title">{"Eng. Saturno Mangieri"}</div>
-        <div className="sub-title">{heroSubtitle}</div>
-        <a href="https://www.codewars.com/users/theghost1980" target="__blank">
-          <img
-            src="https://www.codewars.com/users/theghost1980/badges/small"
-            alt="codewars-level-badge"
-            className="codewars-badge"
-          />
-        </a>
-        <div className="text">click on any bordered icon for details</div>
-        <Arrow />
-      </div>
-      {/* //testing appScripts */}
-      {/* <form
-        method="post"
-        action="https://script.google.com/macros/s/AKfycbxROjlMfdblQixIQhETLEIz84FsMdWp_ZM6VpQMfrNYZHNokGlYZ7y6lsjq14gEik0PDw/exec"
-      >
-        <button type="submit">test</button>
-      </form> */}
-      {/* //end testing */}
+    <div className={`app-container ${theme}`}>
+      <TopSection />
+      <HeroSection />
       <div className="cv-container">
         <Block
-          source={NumberSvgUrl}
+          name="number_one"
           animDuration="4.8s"
-          click={() => setCardExperience("numbers")}
+          click={() => setCardDataName("numbers")}
         />
         <Block
-          source={BlockchainSVGUrl}
+          name="blockchain"
           animDuration="8.5s"
-          click={() => setCardExperience("blockchain")}
+          click={() => setCardDataName("blockchain")}
         />
         <Block
-          source={ReactSvgUrl}
+          name="react"
           animDuration="4s"
-          click={() => setCardExperience("react")}
+          click={() => setCardDataName("react")}
         />
         <Block
-          source={JsSvgUrl}
+          name="js"
           animDuration="5.5s"
-          click={() => setCardExperience("javascript")}
+          click={() => setCardDataName("javascript")}
         />
-        <Block source={TsSvgUrl} animDuration="8s" />
-        <Block source={WebpackSvgUrl} animDuration="7s" />
+        <Block name="ts" animDuration="8s" />
+        <Block name="webpack" animDuration="7s" />
         <Block
-          source={MobileSvgUrl}
+          name="mobile"
           animDuration="7.4s"
-          click={() => setCardExperience("mobile")}
+          click={() => setCardDataName("mobile")}
         />
       </div>
-      {cardExperience && (
+      {cardDataName && (
         <Card
-          close={() => setCardExperience(undefined)}
-          cardDataName={cardExperience}
+          close={() => setCardDataName(undefined)}
+          cardDataName={cardDataName}
+          fetchedCardList={fetchedCardDataList}
         />
       )}
     </div>

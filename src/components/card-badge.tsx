@@ -6,5 +6,13 @@ interface Props {
 }
 
 export const CardBadge = ({ name }: Props) => {
-  return <div className="card-badge">{name}</div>;
+  return (
+    <div
+      className="card-badge"
+      title="Click to google it!"
+      onClick={() => open(`https://www.google.com/search?q=${name}`, "__blank")}
+    >
+      {name}
+    </div>
+  );
 };

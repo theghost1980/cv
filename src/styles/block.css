@@ -7,8 +7,16 @@
   height: 100px;
   width: 100px;
   animation: bounce 1s infinite;
+  &.rounded-borders {
+    border-radius: 40px !important;
+  }
+  &.LIGHT {
+    background-color: unset;
+  }
+  &.DARK {
+    background-color: rgb(225, 224, 224);
+  }
   &.border-block {
-    border: 1px solid #c0bebe;
     border-radius: 50px;
     border-width: medium;
     padding: 4px;
@@ -16,11 +24,24 @@
       cursor: pointer;
       opacity: 0.5;
     }
+    &.LIGHT {
+      border: 2px solid #c0bebe;
+      box-shadow: 0px 1px 5px 2px #c0bebe;
+    }
+    &.DARK {
+      border: 2px solid #f9a913;
+      box-shadow: 0px 1px 12px 2px orange;
+    }
   }
   .image {
-    height: 90px;
-    &.rounded-borders {
-      border-radius: 30px;
+    height: 90px !important;
+    width: 90px !important;
+    border-radius: 30px !important;
+    .icon,
+    svg {
+      height: 90px !important;
+      width: 90px !important;
+      border-radius: 30px !important;
     }
   }
   @media (max-width: 762px) {
