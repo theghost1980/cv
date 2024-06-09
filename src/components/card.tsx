@@ -4,6 +4,7 @@ import { useTheme } from "../context/theme-context";
 import { Project } from "../interfaces/card-data.interface";
 import { CardDataList } from "../reference-data/card-data";
 import "../styles/card.css";
+import { EXCLUDE_FETCHING_LIST } from "../utils/app-utils";
 import { CardBadge } from "./card-badge";
 import { Icon } from "./icon";
 import { Loader } from "./loader";
@@ -23,9 +24,6 @@ export const Card = ({ cardDataName, close, fetchedCardList }: Props) => {
   const [cardData, setCardData] = useState(
     CardDataList.find((c) => c.name === cardDataName)!
   );
-  // const [cardRelatedProjectList, setCardRelatedProjectList] = useState<
-  //   Project[]
-  // >([]);
 
   //TODO remove or use testing hook
   useEffect(() => {
@@ -33,8 +31,10 @@ export const Card = ({ cardDataName, close, fetchedCardList }: Props) => {
   }, [data]);
 
   useEffect(() => {
-    if (fetchedCardList.length > 0) {
-      console.log({ fetchedCardList, p: cardData.relatedProjects });
+    if (
+      fetchedCardList.length > 0 &&
+      !EXCLUDE_FETCHING_LIST.includes(cardDataName)
+    ) {
       const tempRelatedProjects = [...cardData.relatedProjects];
       let updatedProjects = tempRelatedProjects.map((t) => {
         const found = fetchedCardList.find(
@@ -47,87 +47,11 @@ export const Card = ({ cardDataName, close, fetchedCardList }: Props) => {
           };
         }
       });
-      console.log({ updatedProjects });
       setCardData((prev) => {
         return { ...prev, relatedProjects: updatedProjects };
       });
-      // setCardRelatedProjectList(updatedProjects);
     }
   }, [fetchedCardList]);
-
-  // useEffect(() => {
-  //   init();
-  // }, []);
-
-  // const init = async () => {
-  //   if (cardData) {
-  //     setCardRelatedProjectList(cardData.relatedProjects);
-  //     // if (cardDataName === "numbers") {
-  //     //   setLoadingData(false);
-  //     //   return;
-  //     // }
-  //     // try {
-  //     //   let cardDataAdditions: Project[] = [];
-  //     //   for (const rp of cardData.relatedProjects) {
-  //     //     let repoData = await CardUtils.getJsonFromRepository(
-  //     //       rp.otherRepo ?? GITHUB_BASE_URL,
-  //     //       rp.repositoryName
-  //     //     );
-
-  //     //     if (repoData) {
-  //     //       if (
-  //     //         rp.repositoryName.toLowerCase().includes("keychain-extension")
-  //     //       ) {
-  //     //         repoData = {
-  //     //           ...repoData,
-  //     //           homepage: "https://hive-keychain.com/",
-  //     //           topics: [
-  //     //             "blockchain",
-  //     //             "hive-engine",
-  //     //             "hive-crypto",
-  //     //             "typescript",
-  //     //             "webpack",
-  //     //             "jest",
-  //     //             "testing",
-  //     //           ],
-  //     //         };
-  //     //       }
-  //     //       if (rp.repositoryName.toLowerCase().includes("keychain-mobile")) {
-  //     //         repoData = {
-  //     //           ...repoData,
-  //     //           homepage: "https://hive-keychain.com/",
-  //     //           topics: [
-  //     //             "blockchain",
-  //     //             "react-native",
-  //     //             "android",
-  //     //             "ios",
-  //     //             "java",
-  //     //             "jest",
-  //     //             "reactjs",
-  //     //             "typescript",
-  //     //           ],
-  //     //         };
-  //     //       }
-  //     //       cardDataAdditions.push({
-  //     //         repositoryName: rp.repositoryName,
-  //     //         imageUrl: rp.imageUrl,
-  //     //         description: repoData.description,
-  //     //         topics: repoData.topics,
-  //     //         homepage: repoData.homepage,
-  //     //       });
-  //     //     }
-  //     //   }
-  //     //   if (cardDataAdditions.length > 0)
-  //     //     setCardRelatedProjectList(cardDataAdditions);
-  //     // } catch (error) {
-  //     //   console.log("Error fecthing related projects data!", { error });
-  //     // } finally {
-  //     //   setTimeout(() => {
-  //     //     setLoadingData(false);
-  //     //   }, 800);
-  //     // }
-  //   }
-  // };
 
   return (
     <div className="back-card-container">

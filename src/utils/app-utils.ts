@@ -4,8 +4,9 @@ import { CardData, Project } from "../interfaces/card-data.interface";
 import { PageTextContent } from "../reference-data/page-text-content";
 import { CardUtils } from "./card-utils";
 
+export const EXCLUDE_FETCHING_LIST = ["numbers"];
+
 const getCardDataList = async (cardData: CardData[]) => {
-  const EXCLUDE_FETCHING_LIST = ["numbers"];
   try {
     let cardDataAdditions: Project[] = [];
     for (const card of cardData) {
