@@ -19,7 +19,7 @@ import ThemeLight from "../assets/svg/theme-light.svg";
 import Translate from "../assets/svg/translate.svg";
 import TsSvg from "../assets/svg/typescript.svg";
 import WebpackSvg from "../assets/svg/webpack.svg";
-import { useTheme } from "../context/theme-context";
+import { useTheme } from "../contexts/theme-context";
 import { Theme } from "../enums/theme-context-enum";
 import "../styles/icon.css";
 

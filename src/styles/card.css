@@ -29,8 +29,8 @@
     &.DARK {
       background-color: rgb(26, 25, 25);
     }
-    @media (max-width: 770px) {
-      width: 70%;
+    .bg-image {
+      position: absolute;
     }
     .close {
       width: 30px;
@@ -53,11 +53,6 @@
       text-align: center;
     }
 
-    .card-subtitle {
-      font-size: 32px;
-      font-weight: 400;
-    }
-
     .card-description {
       padding: 12px 12px;
       font-size: 24px;
@@ -65,19 +60,9 @@
       line-height: 150%;
     }
 
-    @media (max-width: 770px) {
-      .card-title {
-        font-size: 30px;
-      }
-      .card-subtitle {
-        font-size: 22px;
-      }
-      .card-description {
-        font-size: 18px;
-      }
-    }
-
     .card-projects-container {
+      display: flex;
+      flex-direction: column;
       .card-project-container {
         display: flex;
         flex-direction: row;
@@ -114,31 +99,27 @@
             font-size: 14px;
             font-weight: 400;
           }
-          .url {
-            cursor: pointer;
+          .urls-container {
             display: flex;
+            width: 60%;
             flex-direction: row;
-            align-items: center;
-            max-width: 120px;
             justify-content: space-between;
-            margin: 4px 0px;
-          }
-          @media (max-width: 591px) {
-            width: 90%;
-            overflow: auto;
+            align-items: center;
+            .url {
+              cursor: pointer;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              max-width: 120px;
+              justify-content: space-between;
+              margin: 4px 0px;
+            }
           }
         }
         .card-project-image {
           border-radius: 24px;
           width: 200px;
           height: 200px;
-        }
-      }
-      @media (max-width: 770px) {
-        .card-project-container {
-          flex-direction: column;
-          align-items: center;
-          row-gap: 15px;
         }
       }
     }
@@ -154,5 +135,56 @@
     align-items: center;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.725);
+  }
+  @media (max-width: 800px) {
+    .card-container {
+      width: 90%;
+      height: 90%;
+      padding: 12px 12px;
+      border-radius: 12px;
+      .icon,
+      svg {
+        width: 20px !important;
+        height: 20px !important;
+      }
+      .card-title {
+        font-size: 34px;
+        padding: 12px 12px;
+      }
+      .card-description {
+        font-size: 22px;
+      }
+      .card-project-container {
+        width: auto !important;
+      }
+      .urls-container {
+        width: 90% !important;
+        .url {
+          max-width: unset !important;
+        }
+      }
+    }
+  }
+  @media (max-width: 540px) {
+    .card-projects-container {
+      .card-project-container {
+        .card-project-description-container {
+          text-shadow: 1px 1px lightgray;
+        }
+        .card-project-image {
+          display: none;
+        }
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .card-container {
+      .card-title {
+        font-size: 24px;
+      }
+      .card-description {
+        font-size: 18px;
+      }
+    }
   }
 }

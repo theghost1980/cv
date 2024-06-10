@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from "../../context/theme-context";
+import { useTheme } from "../../contexts/theme-context";
 import "../../styles/block.css";
 import { Icon, IconName } from "../icon";
 

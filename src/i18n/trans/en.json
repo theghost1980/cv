@@ -1,0 +1,281 @@
+{
+  "hero_prof_title": "Engineer",
+  "hero_subtitle": "Professional Frontend Developer with deep experience in Blockchain.",
+  "hero_codewars_icon_title": "Codewars profile",
+  "hero_arrow_text": "click on any bordered icon for details",
+  "top_section_mail_icon_title": "Send me an email",
+  "top_section_github_icon_title": "My GitHub profile",
+  "top_section_linkedin_icon_title": "My Linkedin profile",
+  "top_section_close_icon_title": "Close this section",
+  "top_section_education_icon_title": "My professional education",
+  "top_section_anatomy_icon_title": "Anatomy of this page",
+  "top_section_translate_icon_title": "Translate Page",
+  "card_project_description_label": "Description",
+  "card_project_visit_url_label": "Visit url",
+  "card_project_visit_code_url_label": "Check url",
+  "card_project_skills_label": "Skills/Tech Stack",
+  "card_content": [
+    {
+      "name": "react",
+      "title": "React & React Native Frameworks",
+      "description": "I use one of the most popular development framework tools. I've been using React, since my beginnings, more than 4 years ago. React allows me to build websites from scratch. Sites that contain the minimum necessary: translations, interactivity and made to last in time. Also, as is well known in our field: MERN, it has forced me to learn and master React Native to reuse source code from my React projects and export them to Android and IOS effectively.",
+      "project_list": [
+        {
+          "name": "Landing Page",
+          "description": "Landing page sample built with gatsbyjs, reactjs, pure css & javascript.",
+          "imageUrl": "https://i.ibb.co/ns7pbm4/mini-img-landing-page.png",
+          "topics": [
+            "github",
+            "javascript",
+            "git",
+            "reactjs",
+            "purecss",
+            "netlify",
+            "gatsbyjs"
+          ],
+          "url": "https://cranky-blackwell-3641eb.netlify.app/",
+          "code_url": "https://github.com/theghost1980/landingpage"
+        },
+        {
+          "name": "Rocco's Web Page",
+          "description": "Website designed for the famous writer, philosopher and professor, Rocco Mangieri, disciple of Umberto Eco.",
+          "imageUrl": "https://i.ibb.co/hLP6tcD/mini-img-rocco-Old-Site.png",
+          "topics": ["javascript", "css", "github-pages", "reactjs", "emailjs"],
+          "url": "https://theghost1980.github.io/roccoOldSite/",
+          "code_url": "https://github.com/theghost1980/roccoOldSite"
+        }
+      ]
+    },
+    {
+      "name": "blockchain",
+      "title": "Cryptocurrency & Blockchain",
+      "description": "I have been fortunate to participate in multiple projects related to crypto and blockchain technology. From building a platform, back/front ends, to coding new features in mobile wallets and browsers.",
+      "project_list": [
+        {
+          "name": "Jobaboard Crypto-Portal",
+          "description": "A job board front-end, that allows you to publish job and services while getting paid in cryptocurrency. Work from everywhere get paid in crypto.",
+          "imageUrl": "https://i.ibb.co/SP0fWLt/mini-img-jobaboard.png",
+          "topics": [
+            "react",
+            "javascript",
+            "graphql",
+            "css3",
+            "blockchain",
+            "cryptocurrency"
+          ],
+          "url": "https://awesome-hoover-fbbbdc.netlify.app/",
+          "code_url": "https://github.com/theghost1980/jobaboard"
+        },
+        {
+          "name": "Backend Jobaboard",
+          "description": "A back-end to access Jobaboard operations. Composed by: blockchain operations(HIVE crypto), Custom image CDN & mongo DB.",
+          "imageUrl": "https://i.ibb.co/MG6c1ff/mini-img-jobaboard-be.png",
+          "topics": [
+            "nodejs",
+            "javascript",
+            "heroku",
+            "express",
+            "cdn",
+            "cryptocurrency"
+          ],
+          "url": "https://awesome-hoover-fbbbdc.netlify.app/",
+          "code_url": "https://github.com/theghost1980/jobaboard-be"
+        },
+        {
+          "name": "Hive Keychain Extension",
+          "description": "A wallet browser extension for the Hive blockchain and cryptocurrency. Made to handle tokens operations as stake, decode messages, send & receive crypto coins. Also useful to control many core aspect of the HIVE network itself.",
+          "imageUrl": "https://i.ibb.co/TBkbJRV/mini-img-hive-keychain-extension.png",
+          "topics": [
+            "blockchain",
+            "hive-engine",
+            "hive-crypto",
+            "typescript",
+            "webpack",
+            "jest",
+            "testing"
+          ],
+          "url": "https://hive-keychain.com/",
+          "code_url": "https://github.com/hive-keychain/hive-keychain-extension"
+        }
+      ]
+    },
+    {
+      "name": "javascript",
+      "title": "Oriented programming, running in browsers",
+      "description": "Since my beginnings Javascript has been the engine that powers my code. Jest has been a great school for getting projects to get at least 97% coverage.",
+      "project_list": [
+        {
+          "name": "Hive Keychain Extension",
+          "description": "A wallet browser extension for the Hive blockchain and cryptocurrency. Made to handle tokens operations as stake, decode messages, send & receive crypto coins. Also useful to control many core aspect of the HIVE network itself.",
+          "imageUrl": "https://i.ibb.co/r300WSB/mini-img-hive-keychain-extension-tests.png",
+          "topics": [
+            "blockchain",
+            "hive-engine",
+            "hive-crypto",
+            "typescript",
+            "webpack",
+            "jest",
+            "testing"
+          ],
+          "url": "https://hive-keychain.com/",
+          "code_url": "https://github.com/hive-keychain/hive-keychain-extension"
+        },
+        {
+          "name": "NaNSystems Website",
+          "description": "Professional website, blog & CV. Made using Headless CMS to allow an easy use ofr the website's owner, to update/modify/delete the context presented in the page.",
+          "imageUrl": "https://i.ibb.co/XsyJRtv/mini-img-nansystems.png",
+          "topics": [
+            "react",
+            "graphql",
+            "contentful",
+            "gatsbyjs",
+            "headless-cms"
+          ],
+          "url": "https://nansystems.us/",
+          "code_url": "https://github.com/theghost1980/testNanSystems"
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "title": "React Native, Android & Java",
+      "description": "My development extends to the needs of each project. Mobile applications are as necessary as websites, that's why I have given myself the task of deepening in React-native and the development of applications for Android and IOS.",
+      "project_list": [
+        {
+          "name": "Hive Keychain Mobile(Android & IOS)",
+          "description": "React Native wallet for the Hive blockchain. Allow users to interact in a public cryptocurrency network, emit votes, transfers & handle any kidn of related operations.",
+          "imageUrl": "https://i.ibb.co/jhh096c/mini-img-keychain-mobile.png",
+          "topics": [
+            "blockchain",
+            "react-native",
+            "android",
+            "ios",
+            "java",
+            "jest",
+            "reactjs",
+            "typescript"
+          ],
+          "url": "https://play.google.com/store/search?q=hive%20keychain&c=apps",
+          "code_url": "https://github.com/hive-keychain/hive-keychain-mobile"
+        }
+      ]
+    },
+    {
+      "name": "numbers",
+      "title": "For numbers People, you may count on me!",
+      "description": "To date, I have spent hundreds of hours coding. Every minute has been to focus on a single task: to evolve as a developer and programmer. Just here you can see the details of my time spent in each area.",
+      "project_list": [
+        {
+          "name": "Learning time",
+          "description": "More than 1200 hours to learn about Javascript, Backend & Html Responsive web design",
+          "imageUrl": "https://i.ibb.co/RzQWpQG/mini-img-learning.png",
+          "topics": [
+            "back-end",
+            "arrays",
+            "OPP",
+            "javascript",
+            "objects",
+            "freecodecamp",
+            "udemy"
+          ],
+          "url": "https://www.freecodecamp.org/certification/fccbae972b2-366a-40b2-b8f1-270a0ba386c4/javascript-algorithms-and-data-structures",
+          "code_url": ""
+        },
+        {
+          "name": "Coding Time",
+          "description": "About 100 lines of code minimum per day, over a period of at least 4 years. With due intermittency.",
+          "imageUrl": "https://i.ibb.co/g3cSpfN/mini-img-coding.png",
+          "topics": [
+            "back-end",
+            "arrays",
+            "OPP",
+            "javascript",
+            "objects",
+            "freecodecamp",
+            "udemy"
+          ],
+          "url": "https://github.com/theghost1980",
+          "code_url": ""
+        },
+        {
+          "name": "Results?",
+          "description": "I have managed to add at least 10 major new features in projects that are used by at least 10,000 people. I have consolidated websites and successfully created testing platforms, among other accomplishments.",
+          "imageUrl": "https://i.ibb.co/dpPxKZj/mini-img-statistics.png",
+          "topics": [
+            "back-end",
+            "arrays",
+            "OPP",
+            "javascript",
+            "objects",
+            "freecodecamp",
+            "udemy"
+          ],
+          "url": "https://github.com/theghost1980",
+          "code_url": ""
+        }
+      ]
+    },
+    {
+      "name": "education",
+      "title": "My professional Education",
+      "description": "I have a university degree in Electronic Engineering in Computer Science. Thanks to what I learned at Yacambu University, I started with the taste for programming and software development. I was able to travel and live some years in the United Kingdom, which allowed me to deepen my knowledge of the English language. Below, more information.",
+      "project_list": [
+        {
+          "name": "Assembler",
+          "description": "I have worked programming in low level when working with micro-controllers. Assembler gave me a good learning base when talking about the hardest code you can work with",
+          "imageUrl": "https://i.ibb.co/qBGnrQy/micro.jpg",
+          "topics": [],
+          "url": "",
+          "code_url": ""
+        },
+        {
+          "name": "Courses",
+          "description": "From The Odin Project, passing to reponsive design and bootcamps, have helped me to develop a better sense of what to code and how to do it.",
+          "imageUrl": "https://i.ibb.co/g7j3nm5/0308-638042050063908337.jpg",
+          "topics": [],
+          "url": "https://www.linkedin.com/in/saturno-mangieri/details/certifications/",
+          "code_url": ""
+        }
+      ]
+    },
+    {
+      "name": "anatomy",
+      "title": "How this website was made",
+      "description": "Today we have many options to build a website. I chose to use tools that, although they require more configuration, show that I can work with strong frameworks and extensive development. Still, it is worth noting that as a web developer, I can use the most common ones: vite, create-react-app, gatsby, create-next-app@latest.",
+      "project_list": [
+        {
+          "name": "Webpack",
+          "description": "It is a very powerful tool to be used as the base server and source code compiler of a web page. Here I am using webpack 5.",
+          "imageUrl": "",
+          "topics": [],
+          "url": "",
+          "code_url": ""
+        },
+        {
+          "name": "React",
+          "description": "My preferred development framework that allows me to use JSX, to create from scratch, components and manipulate the DOM, or so called elements of a web page.",
+          "imageUrl": "",
+          "topics": [],
+          "url": "",
+          "code_url": ""
+        },
+        {
+          "name": "Typescript",
+          "description": "It's JavaScript on “steroids”. It's a very useful extra layer, which provides us with variable types, interfaces and objects. It makes this website easier to code and understand. It also provides the important functionality of: Maintain and extend the code in the future.",
+          "imageUrl": "",
+          "topics": [],
+          "url": "",
+          "code_url": ""
+        },
+        {
+          "name": "i18n",
+          "description": "Translation tool, based on local or remote files. Powerful, interactive and widely used.",
+          "imageUrl": "",
+          "topics": [],
+          "url": "",
+          "code_url": ""
+        }
+      ]
+    }
+  ]
+}

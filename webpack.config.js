@@ -1,6 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const Dotenv = require("dotenv-webpack");
 module.exports = {
   mode: "development",
   entry: "./src/main.tsx",
@@ -47,9 +46,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "public/index.html",
       favicon: "./src/assets/svg/saturno.svg",
-    }),
-    new Dotenv({
-      systemvars: true,
     }),
   ],
 };

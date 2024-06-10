@@ -1,52 +1,24 @@
 import React from "react";
-import { useTranslationContext } from "../context/data-context";
+import { useTranslation } from "react-i18next";
 import "../styles/hero-section.css";
-import { TranslationUtils } from "../utils/translation-utils";
 import { Arrow } from "./arrow";
 
 export const HeroSection = () => {
-  const { language, data } = useTranslationContext();
+  const { t } = useTranslation();
 
   return (
     <div className={"hero-section-container"}>
-      <div className="main-title">
-        {TranslationUtils.getTranslationIfAny(
-          "hero_prof_title",
-          "Engineer",
-          data,
-          language
-        )}{" "}
-        Saturno Mangieri
-      </div>
-      <div className="sub-title">
-        {TranslationUtils.getTranslationIfAny(
-          "hero_subtitle",
-          "Professional Frontend Developer with deep experience in Blockchain.",
-          data,
-          language
-        )}
-      </div>
+      <div className="main-title">{t("hero_prof_title")} Saturno Mangieri</div>
+      <div className="sub-title">{t("hero_subtitle")}</div>
       <a href="https://www.codewars.com/users/theghost1980" target="__blank">
         <img
           src="https://www.codewars.com/users/theghost1980/badges/small"
           alt="codewars-level-badge"
           className="codewars-badge"
-          title={TranslationUtils.getTranslationIfAny(
-            "hero_codewars_icon_title",
-            "Codewars profile",
-            data,
-            language
-          )}
+          title={t("hero_codewars_icon_title")}
         />
       </a>
-      <div className="text">
-        {TranslationUtils.getTranslationIfAny(
-          "hero_arrow_text",
-          "click on any bordered icon for details",
-          data,
-          language
-        )}
-      </div>
+      <div className="text">{t("hero_arrow_text")}</div>
       <Arrow />
     </div>
   );

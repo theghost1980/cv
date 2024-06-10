@@ -1,16 +1,15 @@
 export interface Project {
+  name: string;
+  description: string;
   imageUrl: string;
-  repositoryName: string;
-  description?: string;
-  topics?: string[];
-  homepage?: string;
-  otherRepo?: string;
+  topics: string[];
+  url: string;
+  code_url: string;
 }
 
 export interface CardData {
   name: string;
   title: string;
-  subtitle?: string;
   description: string;
-  relatedProjects: Project[];
+  project_list: Project[];
 }

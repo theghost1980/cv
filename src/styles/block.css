@@ -44,13 +44,6 @@
       border-radius: 30px !important;
     }
   }
-  @media (max-width: 762px) {
-    height: 60px;
-    width: 60px;
-    .image {
-      height: 50px;
-    }
-  }
 }
 
 @keyframes bounce {
@@ -66,5 +59,38 @@
   }
   100% {
     bottom: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .bounce {
+    width: 70px !important;
+    height: 70px !important;
+    .icon {
+      display: contents !important;
+      width: 70px !important;
+      height: 70px !important;
+      svg {
+        width: 60px !important;
+        height: 60px !important;
+        border-radius: 20px !important;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .bounce {
+    width: 60px !important;
+    height: 60px !important;
+    .icon {
+      display: contents !important;
+      width: 60px !important;
+      height: 60px !important;
+      svg {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 20px !important;
+      }
+    }
   }
 }

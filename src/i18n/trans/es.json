@@ -1,0 +1,281 @@
+{
+  "hero_prof_title": "Ingeniero",
+  "hero_subtitle": "Desarrollador Frontend profesional con profunda experiencia en Blockchain",
+  "hero_codewars_icon_title": "Perfil Codewars",
+  "hero_arrow_text": "haz clic en cualquier icono con borde para obtener más detalles",
+  "top_section_mail_icon_title": "Envíame un correo electrónico",
+  "top_section_github_icon_title": "Mi perfil de GitHub",
+  "top_section_linkedin_icon_title": "Mi perfil de Linkedin",
+  "top_section_close_icon_title": "Cerrar esta sección",
+  "top_section_education_icon_title": "Mi formación profesional",
+  "top_section_anatomy_icon_title": "Anatomía de esta página",
+  "top_section_translate_icon_title": "Traducir página",
+  "card_project_description_label": "Descripción",
+  "card_project_visit_url_label": "Visitar Url",
+  "card_project_visit_code_url_label": "Mirar codigo",
+  "card_project_skills_label": "Habilidades/pila tecnológica",
+  "card_content": [
+    {
+      "name": "react",
+      "title": "React & React Native Frameworks",
+      "description": "Uso una de las herramientas de framework de desarrollo más populares. Llevo usando React, desde mis inicios, hace más de 4 años. React me permite construir sitios web desde cero. Sitios que contienen lo mínimo necesario: traducciones, interactividad y hechos para perdurar en el tiempo. Además, como es bien sabido en nuestro ámbito: MERN, me ha obligado a aprender y dominar React Native para reutilizar el código fuente de mis proyectos React y exportarlos a Android e IOS de forma efectiva.",
+      "project_list": [
+        {
+          "name": "Landing Page",
+          "description": "Muestra de landing page construida con gatsbyjs, reactjs, pure css & javascript",
+          "imageUrl": "https://i.ibb.co/ns7pbm4/mini-img-landing-page.png",
+          "topics": [
+            "github",
+            "javascript",
+            "git",
+            "reactjs",
+            "purecss",
+            "netlify",
+            "gatsbyjs"
+          ],
+          "url": "https://cranky-blackwell-3641eb.netlify.app/",
+          "code_url": "https://github.com/theghost1980/landingpage"
+        },
+        {
+          "name": "Página Web de Rocco",
+          "description": "Página web diseñada para el famoso escritor, filósofo y profesor, Rocco Mangieri, discípulo de Umberto Eco",
+          "imageUrl": "https://i.ibb.co/hLP6tcD/mini-img-rocco-Old-Site.png",
+          "topics": ["javascript", "css", "github-pages", "reactjs", "emailjs"],
+          "url": "https://theghost1980.github.io/roccoOldSite/",
+          "code_url": "https://github.com/theghost1980/roccoOldSite"
+        }
+      ]
+    },
+    {
+      "name": "blockchain",
+      "title": "Criptomoneda y Blockchain",
+      "description": "He tenido la suerte de participar en múltiples proyectos relacionados con la tecnología crypto y blockchain. Desde la construcción de una plataforma, back/front ends, hasta la codificación de nuevas funcionalidades en billeteras móviles y navegadores.",
+      "project_list": [
+        {
+          "name": "Jobaboard Crypto-Portal",
+          "description": "Un front-end de bolsa de trabajo, que te permite publicar trabajos y servicios mientras te pagan en criptomoneda. Trabaja desde cualquier lugar y cobra en criptomonedas",
+          "imageUrl": "https://i.ibb.co/SP0fWLt/mini-img-jobaboard.png",
+          "topics": [
+            "react",
+            "javascript",
+            "graphql",
+            "css3",
+            "blockchain",
+            "cryptocurrency"
+          ],
+          "url": "https://awesome-hoover-fbbbdc.netlify.app/",
+          "code_url": "https://github.com/theghost1980/jobaboard"
+        },
+        {
+          "name": "Backend Jobaboard",
+          "description": "Un back-end para acceder a las operaciones de Jobaboard. Compuesto por: blockchain operations(HIVE crypto), Custom image CDN & mongo DB",
+          "imageUrl": "https://i.ibb.co/MG6c1ff/mini-img-jobaboard-be.png",
+          "topics": [
+            "nodejs",
+            "javascript",
+            "heroku",
+            "express",
+            "cdn",
+            "cryptocurrency"
+          ],
+          "url": "https://awesome-hoover-fbbbdc.netlify.app/",
+          "code_url": "https://github.com/theghost1980/jobaboard-be"
+        },
+        {
+          "name": "Extensión de llavero Hive",
+          "description": "Una extensión de navegador de cartera para el blockchain Hive y cryptocurrency. Hecha para manejar operaciones de tokens como stake, decodificar mensajes, enviar y recibir criptomonedas. También útil para controlar muchos aspectos centrales de la propia red HIVE",
+          "imageUrl": "https://i.ibb.co/TBkbJRV/mini-img-hive-keychain-extension.png",
+          "topics": [
+            "blockchain",
+            "hive-engine",
+            "hive-crypto",
+            "typescript",
+            "webpack",
+            "jest",
+            "testing"
+          ],
+          "url": "https://hive-keychain.com/",
+          "code_url": "https://github.com/hive-keychain/hive-keychain-extension"
+        }
+      ]
+    },
+    {
+      "name": "javascript",
+      "title": "Programación orientada, que se ejecuta en navegadores",
+      "description": "Desde mis inicios Javascript ha sido el motor que impulsa mi código. Jest ha sido una gran escuela para conseguir que los proyectos tengan al menos un 97% de cobertura",
+      "project_list": [
+        {
+          "name": "Extensión del Llavero Hive",
+          "description": "Una extensión de navegador de cartera para el blockchain Hive y cryptocurrency. Hecha para manejar operaciones de tokens como stake, decodificar mensajes, enviar y recibir criptomonedas. También útil para controlar muchos aspectos centrales de la propia red HIVE",
+          "imageUrl": "https://i.ibb.co/r300WSB/mini-img-hive-keychain-extension-tests.png",
+          "topics": [
+            "blockchain",
+            "hive-engine",
+            "hive-crypto",
+            "typescript",
+            "webpack",
+            "jest",
+            "testing"
+          ],
+          "url": "https://hive-keychain.com/",
+          "code_url": "https://github.com/hive-keychain/hive-keychain-extension"
+        },
+        {
+          "name": "Sitio web de NaNSystems",
+          "description": "Sitio web profesional, blog y CV. Made using Headless CMS to allow an easy use ofr the website's owner, to update/modify/delete the context presented in the page.",
+          "imageUrl": "https://i.ibb.co/XsyJRtv/mini-img-nansystems.png",
+          "topics": [
+            "react",
+            "graphql",
+            "contentful",
+            "gatsbyjs",
+            "headless-cms"
+          ],
+          "url": "https://nansystems.us/",
+          "code_url": "https://github.com/theghost1980/testNanSystems"
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "title": "React Native, Android y Java",
+      "description": "Mi desarrollo se extiende a las necesidades de cada proyecto. Las aplicaciones móviles son tan necesarias como las webs, por eso me he dado a la tarea de profundizar en React-native y el desarrollo de aplicaciones para Android e IOS.",
+      "project_list": [
+        {
+          "name": "Hive Keychain Mobile(Android & IOS)",
+          "description": "Monedero React Native para la blockchain Hive. Permite a los usuarios interactuar en una red pública de cryptocurrency, emitir votos, transferencias & manejar cualquier kidn de operaciones relacionadas.",
+          "imageUrl": "https://i.ibb.co/jhh096c/mini-img-keychain-mobile.png",
+          "topics": [
+            "blockchain",
+            "react-native",
+            "android",
+            "ios",
+            "java",
+            "jest",
+            "reactjs",
+            "typescript"
+          ],
+          "url": "https://play.google.com/store/search?q=hive%20keychain&c=apps",
+          "code_url": "https://github.com/hive-keychain/hive-keychain-mobile"
+        }
+      ]
+    },
+    {
+      "name": "numbers",
+      "title": "Para la gente de números, ¡puedes contar conmigo!",
+      "description": "Hasta la fecha, he pasado cientos de horas codificando. Cada minuto ha sido para centrarme en una única tarea: evolucionar como desarrollador y programador. Aquí puedes ver el detalle del tiempo que he dedicado a cada área",
+      "project_list": [
+        {
+          "name": "Tiempo de aprendizaje",
+          "description": "Más de 1200 horas para aprender sobre Javascript, Backend & Html Responsive web design",
+          "imageUrl": "https://i.ibb.co/RzQWpQG/mini-img-learning.png",
+          "topics": [
+            "back-end",
+            "arrays",
+            "OPP",
+            "javascript",
+            "objects",
+            "freecodecamp",
+            "udemy"
+          ],
+          "url": "https://www.freecodecamp.org/certification/fccbae972b2-366a-40b2-b8f1-270a0ba386c4/javascript-algorithms-and-data-structures",
+          "code_url": ""
+        },
+        {
+          "name": "Tiempo de codificación",
+          "description": "Unas 100 líneas de código mínimo al día, durante un periodo de al menos 4 años. Con la debida intermitencia",
+          "imageUrl": "https://i.ibb.co/g3cSpfN/mini-img-coding.png",
+          "topics": [
+            "back-end",
+            "arrays",
+            "OPP",
+            "javascript",
+            "objects",
+            "freecodecamp",
+            "udemy"
+          ],
+          "url": "https://github.com/theghost1980",
+          "code_url": ""
+        },
+        {
+          "name": "¿Resultados?",
+          "description": "He conseguido añadir al menos 10 nuevas funcionalidades importantes en proyectos que utilizan al menos 10.000 personas. He consolidado sitios web y creado con éxito plataformas de pruebas, entre otros logros.",
+          "imageUrl": "https://i.ibb.co/dpPxKZj/mini-img-statistics.png",
+          "topics": [
+            "back-end",
+            "arrays",
+            "OPP",
+            "javascript",
+            "objects",
+            "freecodecamp",
+            "udemy"
+          ],
+          "url": "https://github.com/theghost1980",
+          "code_url": ""
+        }
+      ]
+    },
+    {
+      "name": "education",
+      "title": "Mi educación profesional",
+      "description": "Tengo un título universitario en Ingeniería Electrónica en Informática. Gracias a lo aprendido en la Universidad Yacambu, comencé con el gusto por la programación y el desarrollo de software. Pude viajar y vivir algunos años en el Reino Unido, lo que me permitió profundizar mis conocimientos del idioma inglés. A continuación, más información",
+      "project_list": [
+        {
+          "name": "Ensamblador",
+          "description": "He trabajado programando en bajo nivel cuando trabajaba con microcontroladores. Assembler me dio una buena base de aprendizaje cuando se habla del código más difícil con el que se puede trabajar",
+          "imageUrl": "",
+          "topics": [],
+          "url": "",
+          "code_url": ""
+        },
+        {
+          "name": "Courses",
+          "description": "Desde The Odin Project, pasando por reponsive design y bootcamps, me han ayudado a desarrollar un mejor sentido de qué codificar y cómo hacerlo",
+          "imageUrl": "",
+          "topics": [],
+          "url": "https://www.linkedin.com/in/saturno-mangieri/details/certifications/",
+          "code_url": ""
+        }
+      ]
+    },
+    {
+      "name": "anatomy",
+      "title": "Cómo se hizo este sitio web?",
+      "description": "Hoy en día tenemos muchas opciones para construir un sitio web. Yo opté por utilizar herramientas que, aunque requieren más configuración, demuestran que puedo trabajar con frameworks fuertes y un desarrollo extenso. Aun así, cabe destacar que como desarrollador web, puedo utilizar las más comunes: vite, create-react-app, gatsby, create-next-app@latest",
+      "project_list": [
+        {
+          "name": "Webpack",
+          "description": "Es una herramienta muy potente para ser utilizada como servidor base y compilador de código fuente de una página web. Aquí estoy usando webpack 5",
+          "imageUrl": "",
+          "topics": [],
+          "url": "",
+          "code_url": ""
+        },
+        {
+          "name": "React",
+          "description": "Mi framework de desarrollo preferido que me permite utilizar JSX, para crear desde cero, componentes y manipular el DOM, o los llamados elementos de una página web.",
+          "imageUrl": "",
+          "topics": [],
+          "url": "",
+          "code_url": ""
+        },
+        {
+          "name": "Typescript",
+          "description": "Es JavaScript con “esteroides”. Es una capa extra muy útil, que nos proporciona tipos variables, interfaces y objetos. Hace que este sitio web sea más fácil de codificar y entender. También proporciona la importante funcionalidad de: Mantener y extender el código en el futuro",
+          "imageUrl": "",
+          "topics": [],
+          "url": "",
+          "code_url": ""
+        },
+        {
+          "name": "i18n",
+          "description": "Herramienta de traducción, basada en archivos locales o remotos. Potente, interactiva y ampliamente utilizada",
+          "imageUrl": "",
+          "topics": [],
+          "url": "",
+          "code_url": ""
+        }
+      ]
+    }
+  ]
+}
