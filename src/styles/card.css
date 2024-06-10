@@ -169,6 +169,7 @@
     .card-projects-container {
       .card-project-container {
         .card-project-description-container {
+          color: black;
           text-shadow: 1px 1px lightgray;
         }
         .card-project-image {
