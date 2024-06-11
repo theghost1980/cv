@@ -7,8 +7,9 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  z-index: 1;
+  z-index: 11;
   .card-container {
+    z-index: 20 !important;
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -133,7 +134,7 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    z-index: 1;
+    z-index: 10;
     background-color: rgba(0, 0, 0, 0.725);
   }
   @media (max-width: 800px) {

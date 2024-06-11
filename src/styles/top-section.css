@@ -5,6 +5,7 @@
   width: 100%;
   max-height: 60px;
   justify-content: space-between;
+  z-index: 10 !important;
 
   .contact-section,
   .info_section {
