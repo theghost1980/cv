@@ -43,6 +43,25 @@
           "topics": ["javascript", "css", "github-pages", "reactjs", "emailjs"],
           "url": "https://theghost1980.github.io/roccoOldSite/",
           "code_url": "https://github.com/theghost1980/roccoOldSite"
+        },
+        {
+          "nombre": "Antiguo blog/portafolio 2020",
+          "description": "Antiguo Portfolio realizado utilizando desarrollo web moderno y techinques actuales del sector.",
+          "imageUrl": "https://i.ibb.co/sy8Fk97/Screenshot-2024-06-15-133220.png",
+          "topics": [
+            "gitlab",
+            "yarn",
+            "reactjs",
+            "gatsbyjs",
+            "headless-cms",
+            "react-audio-player",
+            "react-helmet",
+            "contenful",
+            "emailjs",
+            "i18n-react"
+          ],
+          "url": "https://frosty-poincare-a18064.netlify.app/",
+          "code_url": "https://gitlab.com/saturnoman/portfolio"
         }
       ]
     },
